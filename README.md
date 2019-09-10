@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+###############################################################################################################################################################################
+###############################################################################################################################################################################
+###############################################################################################################################################################################
+
+### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
+
+To fix this error set the ports to your convenience. https://github.com/googlevr/gvr-unity-sdk/issues/1002
+
+netsh interface ipv4 show excludedportrange protocol=tcp
