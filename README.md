@@ -71,8 +71,37 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ###############################################################################################################################################################################
 ###############################################################################################################################################################################
 
+### Docker-CLI process
+
+1-npm run start (Starts up a dev server. For dev use only)
+
+docker build -f dockerfile.dev .
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <imageId>    (Linux or Mac)
+docker run -p 3000:3000 -v /app/node_modules -v %CD%:/app <imageId>      (Windows)
+
+2-npm run test (Runs test associated with the project)
+
+docker build -f dockerfile.dev .
+docker run <imageId> npm run test
+docker run -it <imageId> npm run test
+
+docker-compose up
+docker exec -it <containerId> npm run test
+
+3-npm run build (Builds a prod version of the app)
+
+
+
+### Docker-Compose process
+
+
+
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
 To fix this error set the ports to your convenience. https://github.com/googlevr/gvr-unity-sdk/issues/1002
 
 netsh interface ipv4 show excludedportrange protocol=tcp
+
+### Issue "Docker compose volumes, Auto-reloading on code changes not working"
+
+https://github.com/docker/for-win/issues/56
