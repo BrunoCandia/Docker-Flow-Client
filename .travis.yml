@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t brunocandia/Docker-Flow-Client -f dockerfile.dev .
+  - docker build -t brunocandia/docker-flow-client -f dockerfile.dev .
 
 script:
-  - docker run e- CI=true brunocandia/Docker-Flow-Client npm run test
+  - docker run e- CI=true brunocandia/docker-flow-client npm run test
