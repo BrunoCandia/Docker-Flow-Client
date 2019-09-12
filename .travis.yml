@@ -1,3 +1,5 @@
+language: generic
+
 sudo: required
 
 services:
@@ -7,4 +9,4 @@ before_install:
   - docker build -t brunocandia/Docker-Flow-Client -f dockerfile.dev .
 
 script:
-  - docker run brunocandia/Docker-Flow-Client npm run test -- --coverage
+  - docker run e- CI=true brunocandia/Docker-Flow-Client npm run test
