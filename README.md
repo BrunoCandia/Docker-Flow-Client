@@ -74,19 +74,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Docker-CLI process
 
 1-npm run start (Starts up a dev server. For dev use only)
-
+```
 docker build -f dockerfile.dev .
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <imageId>    (Linux or Mac)
 docker run -p 3000:3000 -v /app/node_modules -v %CD%:/app <imageId>      (Windows)
+```
 
 2-npm run test (Runs test associated with the project)
-
+```
 docker build -f dockerfile.dev .
 docker run <imageId> npm run test
 docker run -it <imageId> npm run test
-
+```
+```
 docker-compose up
 docker exec -it <containerId> npm run test
+```
 
 3-npm run build (Builds a prod version of the app)
 
@@ -95,9 +98,10 @@ docker exec -it <containerId> npm run test
 The use of docker-compose is a shorthand of all above.
 
 ### Implementing Multi-Step builds
-
+```
 docker build .
 docker run -p 8080:80 <imageId>
+```
 
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
