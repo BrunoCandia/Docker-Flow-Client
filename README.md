@@ -90,11 +90,14 @@ docker exec -it <containerId> npm run test
 
 3-npm run build (Builds a prod version of the app)
 
-
-
 ### Docker-Compose process
 
+The use of docker-compose is a shorthand of all above.
 
+### Implementing Multi-Step builds
+
+docker build .
+docker run -p 8080:80 <imageId>
 
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
