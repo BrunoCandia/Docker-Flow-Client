@@ -106,8 +106,9 @@ docker run -p 8080:80 <imageId>
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
 To fix this error set the ports to your convenience. https://github.com/googlevr/gvr-unity-sdk/issues/1002
-
+```
 netsh interface ipv4 show excludedportrange protocol=tcp
+```
 
 ### Issue "Docker compose volumes, Auto-reloading on code changes not working"
 

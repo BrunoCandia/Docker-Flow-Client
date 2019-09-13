@@ -18,6 +18,9 @@ RUN npm run build
 
 FROM nginx
 
+# for deploy env only, to make it work with elasticbeanstalk, it is not needed for dev env
+EXPOSE 80
+
 COPY --from=builder /app/build /usr/share/nginx/html
 
 
