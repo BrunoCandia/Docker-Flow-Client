@@ -113,3 +113,5 @@ netsh interface ipv4 show excludedportrange protocol=tcp
 ### Issue "Docker compose volumes, Auto-reloading on code changes not working"
 
 https://github.com/docker/for-win/issues/56
+
+### Test deploy
