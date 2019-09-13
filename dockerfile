@@ -5,7 +5,8 @@ FROM node:alpine as builder
 
 WORKDIR '/app'
 
-COPY package.json .
+# COPY package.json .   AWS has a tough time with the '.' folder designation and prefers the long form ./
+COPY package*.json ./
 
 RUN npm install
 
