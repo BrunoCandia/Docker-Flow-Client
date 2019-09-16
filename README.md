@@ -71,6 +71,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ###############################################################################################################################################################################
 ###############################################################################################################################################################################
 
+### Notes
+
+This is a Single-Container application over to Amazon ElasticBeanstalk.
+The app is simple, no outside dependencies like services or databases.
+
 ### Docker-CLI process
 
 1-npm run start (Starts up a dev server. For dev use only)
