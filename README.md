@@ -120,3 +120,5 @@ netsh interface ipv4 show excludedportrange protocol=tcp
 https://github.com/docker/for-win/issues/56
 
 ### Deploy issue "Elastic Beanstalk is case sensitive so make sure your file is labeled "Dockerfile" not "dockerfile""
+
+### Just the production env is using nginx
