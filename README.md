@@ -108,6 +108,14 @@ docker build .
 docker run -p 8080:80 <imageId>
 ```
 
+### Production Single-Container deployments flow
+
+1-Push code to github
+2-Travis automatically pulls repo
+3-Travis builds an image, tests code
+4-Travis pushes code to AWS EB
+5-EB builds image and deploys it
+
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
 To fix this error set the ports to your convenience. https://github.com/googlevr/gvr-unity-sdk/issues/1002
