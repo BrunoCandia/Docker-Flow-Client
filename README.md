@@ -78,14 +78,14 @@ The app is simple, no outside dependencies like services or databases.
 
 ### Docker-CLI process
 
-1-npm run start (Starts up a dev server. For dev use only)
+1. npm run start (Starts up a dev server. For dev use only)
 ```
 docker build -f dockerfile.dev .
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <imageId>    (Linux or Mac)
 docker run -p 3000:3000 -v /app/node_modules -v %CD%:/app <imageId>      (Windows)
 ```
 
-2-npm run test (Runs test associated with the project)
+2. npm run test (Runs test associated with the project)
 ```
 docker build -f dockerfile.dev .
 docker run <imageId> npm run test
@@ -96,7 +96,7 @@ docker-compose up
 docker exec -it <containerId> npm run test
 ```
 
-3-npm run build (Builds a prod version of the app)
+3. npm run build (Builds a prod version of the app)
 
 ### Docker-Compose process
 
@@ -110,11 +110,11 @@ docker run -p 8080:80 <imageId>
 
 ### Production Single-Container deployments flow
 
-1-Push code to github
-2-Travis automatically pulls repo
-3-Travis builds an image, tests code
-4-Travis pushes code to AWS EB
-5-EB builds image and deploys it
+1. Push code to github
+2. Travis automatically pulls repo
+3. Travis builds an image, tests code
+4. Travis pushes code to AWS EB
+5. EB builds image and deploys it
 
 ### Fix error "An attempt was made to access a socket in a way forbidden by its access permissions."
 
